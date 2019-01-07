@@ -16,7 +16,7 @@ namespace Steam_easy_switch
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FormAccounts());
         }
     }
 }
