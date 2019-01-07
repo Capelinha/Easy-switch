@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAccounts));
             this.flPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.pbClose = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
             this.panelOptions = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.panelOptions.SuspendLayout();
@@ -59,21 +59,22 @@
             this.pbClose.TabStop = false;
             this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
             // 
-            // label1
+            // label
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("D-DIN Exp", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(10, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 12);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Steam account switcher";
+            this.label.AutoSize = true;
+            this.label.Font = new System.Drawing.Font("D-DIN Exp", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.Location = new System.Drawing.Point(10, 9);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(126, 12);
+            this.label.TabIndex = 4;
+            this.label.Text = "Steam account switcher";
+            this.label.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelOptions_MouseMove);
             // 
             // panelOptions
             // 
             this.panelOptions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.panelOptions.Controls.Add(this.pbClose);
-            this.panelOptions.Controls.Add(this.label1);
+            this.panelOptions.Controls.Add(this.label);
             this.panelOptions.Location = new System.Drawing.Point(2, 0);
             this.panelOptions.Name = "panelOptions";
             this.panelOptions.Size = new System.Drawing.Size(681, 28);
@@ -110,7 +111,7 @@
 
         private System.Windows.Forms.FlowLayoutPanel flPanel;
         private System.Windows.Forms.PictureBox pbClose;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label;
         private System.Windows.Forms.Panel panelOptions;
         //private PanelP panel;
         //private System.Windows.Forms.TableLayoutPanel tlPanel;
