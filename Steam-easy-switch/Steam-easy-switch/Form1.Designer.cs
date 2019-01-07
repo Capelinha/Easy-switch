@@ -30,63 +30,63 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelP1 = new Steam_easy_switch.PanelP();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelPersonaName = new System.Windows.Forms.Label();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.labelAccountName = new System.Windows.Forms.Label();
             this.panelP1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // panelP1
             // 
             this.panelP1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelP1.Controls.Add(this.label2);
-            this.panelP1.Controls.Add(this.pictureBox1);
-            this.panelP1.Controls.Add(this.label1);
-            this.panelP1.Location = new System.Drawing.Point(39, 25);
+            this.panelP1.Controls.Add(this.labelPersonaName);
+            this.panelP1.Controls.Add(this.pictureBox);
+            this.panelP1.Controls.Add(this.labelAccountName);
+            this.panelP1.id64 = ((long)(0));
+            this.panelP1.Location = new System.Drawing.Point(43, 32);
             this.panelP1.Name = "panelP1";
             this.panelP1.Size = new System.Drawing.Size(120, 150);
             this.panelP1.TabIndex = 1;
             this.panelP1.Hover += new System.EventHandler<Steam_easy_switch.PanelP.HoverEventArgs>(this.panelP1_Hover);
             // 
-            // label2
+            // labelPersonaName
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("D-DIN Exp", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 119);
-            this.label2.Margin = new System.Windows.Forms.Padding(0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "CAPELINHA";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.labelPersonaName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelPersonaName.AutoSize = true;
+            this.labelPersonaName.Font = new System.Drawing.Font("D-DIN Exp", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPersonaName.Location = new System.Drawing.Point(12, 119);
+            this.labelPersonaName.Margin = new System.Windows.Forms.Padding(0);
+            this.labelPersonaName.Name = "labelPersonaName";
+            this.labelPersonaName.Size = new System.Drawing.Size(97, 17);
+            this.labelPersonaName.TabIndex = 2;
+            this.labelPersonaName.Text = "CAPELINHA";
             // 
-            // pictureBox1
+            // pictureBox
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(19, 29);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(80, 80);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox.Image")));
+            this.pictureBox.Location = new System.Drawing.Point(19, 29);
+            this.pictureBox.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(80, 80);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox.TabIndex = 0;
+            this.pictureBox.TabStop = false;
             // 
-            // label1
+            // labelAccountName
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("D-DIN", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(120)))), ((int)(((byte)(127)))));
-            this.label1.Location = new System.Drawing.Point(22, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 12);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "mateusoigreja";
+            this.labelAccountName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelAccountName.AutoSize = true;
+            this.labelAccountName.Font = new System.Drawing.Font("D-DIN", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAccountName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(120)))), ((int)(((byte)(127)))));
+            this.labelAccountName.Location = new System.Drawing.Point(22, 9);
+            this.labelAccountName.Margin = new System.Windows.Forms.Padding(0);
+            this.labelAccountName.Name = "labelAccountName";
+            this.labelAccountName.Size = new System.Drawing.Size(72, 12);
+            this.labelAccountName.TabIndex = 1;
+            this.labelAccountName.Text = "mateusoigreja";
             // 
             // Form1
             // 
@@ -100,16 +100,16 @@
             this.Text = "Form1";
             this.panelP1.ResumeLayout(false);
             this.panelP1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label labelPersonaName;
+        private System.Windows.Forms.Label labelAccountName;
+        private System.Windows.Forms.PictureBox pictureBox;
         private PanelP panelP1;
     }
 }
