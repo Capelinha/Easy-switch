@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAccounts));
             this.flPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.pbClose = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -70,6 +71,7 @@
             // 
             // panelOptions
             // 
+            this.panelOptions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.panelOptions.Controls.Add(this.pbClose);
             this.panelOptions.Controls.Add(this.label1);
             this.panelOptions.Location = new System.Drawing.Point(2, 0);
@@ -77,7 +79,6 @@
             this.panelOptions.Size = new System.Drawing.Size(681, 28);
             this.panelOptions.TabIndex = 5;
             this.panelOptions.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelOptions_MouseMove);
-            this.panelOptions.BackColor = System.Drawing.Color.FromArgb(0, 0, 0, 0);
             // 
             // FormAccounts
             // 
@@ -90,6 +91,7 @@
             this.Controls.Add(this.flPanel);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(203)))), ((int)(((byte)(216)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormAccounts";
