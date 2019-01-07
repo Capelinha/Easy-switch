@@ -88,7 +88,7 @@ namespace Steam_easy_switch
             // 
             // panel
             // 
-             panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+             //panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
              panel.Controls.Add(tlPanel);
              panel.Location = new System.Drawing.Point(22, 278);
              panel.Name = "panel";
@@ -98,6 +98,7 @@ namespace Steam_easy_switch
              panel.Click += new System.EventHandler(this.panel_Click);
              panel.AccountName = accountName;
              panel.Cursor = System.Windows.Forms.Cursors.Hand;
+             panel.BackColor = Color.FromArgb(255, 33, 34, 39);
 
             // 
             // tlPanel
@@ -189,13 +190,20 @@ namespace Steam_easy_switch
                 System.Diagnostics.Process pp = new System.Diagnostics.Process();
                 pp.StartInfo.FileName = "Registry_changer.exe";
                 pp.StartInfo.Arguments = ((PanelP)sender).AccountName;
-                pp.Start();
 
-                //Registry.CurrentUser.OpenSubKey("SOFTWARE\\Valve\\Steam",true).SetValue("AutoLoginUser",((PanelP)sender).AccountName);
-                String strSteamInstallPath = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Valve\\Steam").GetValue("InstallPath").ToString();
-                
-                Process.Start(strSteamInstallPath + "\\steam.exe");
-                //MessageBox.Show("Open your steam now!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                try
+                {
+                   pp.Start();
+                   //Registry.CurrentUser.OpenSubKey("SOFTWARE\\Valve\\Steam",true).SetValue("AutoLoginUser",((PanelP)sender).AccountName);
+                   String strSteamInstallPath = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Valve\\Steam").GetValue("InstallPath").ToString();
+                   //MessageBox.Show("Open your steam now!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                   Process.Start(strSteamInstallPath + "\\steam.exe");
+                }
+                catch (Win32Exception ee)
+                {
+                    MessageBox.Show("Error: " + ee.Message, "Info", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
                 pbClose_Click(null, null);
             }
