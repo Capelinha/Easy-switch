@@ -16,5 +16,24 @@ namespace Steam_easy_switch
         {
             InitializeComponent();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelP1_Hover(object sender, PanelP.HoverEventArgs e)
+        {
+            if (e.Active)
+            {
+                ((PanelP)sender).BackColor = Color.FromArgb(255,32,38,53);
+            }
+            else
+            {
+                ((PanelP)sender).BackColor = Color.FromArgb(255, 33, 34, 39);
+            }
+        }
+
+
     }
 }
