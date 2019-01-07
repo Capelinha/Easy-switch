@@ -13,11 +13,21 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using System.Diagnostics;
+using System.Runtime.InteropServices;
 
 namespace Steam_easy_switch
 {
     public partial class FormAccounts : Form
     {
+
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+
+        [DllImportAttribute("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [DllImportAttribute("user32.dll")]
+        public static extern bool ReleaseCapture();
+
         public FormAccounts()
         {
             InitializeComponent();
@@ -121,8 +131,8 @@ namespace Steam_easy_switch
              labelAccountName.TabIndex = 0;
              labelAccountName.Text = accountName;
              labelAccountName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-             labelAccountName.Click += new System.EventHandler(this.panel_Click);
              labelAccountName.Cursor = System.Windows.Forms.Cursors.Hand;
+             labelAccountName.Click += new System.EventHandler(this.panel_Click);
             // 
             // labelPersonaName
             // 
@@ -135,8 +145,8 @@ namespace Steam_easy_switch
              labelPersonaName.TabIndex = 3;
              labelPersonaName.Text = personalName;
              labelPersonaName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-             labelPersonaName.Click += new System.EventHandler(this.panel_Click);
              labelPersonaName.Cursor = System.Windows.Forms.Cursors.Hand;
+             labelPersonaName.Click += new System.EventHandler(this.panel_Click);
             // 
             // pictureBox
             // 
@@ -148,9 +158,10 @@ namespace Steam_easy_switch
              pictureBox.Size = new System.Drawing.Size(120, 120);
              pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
              pictureBox.TabIndex = 2;
+             pictureBox.Click += new System.EventHandler(this.panel_Click);
              pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
              pictureBox.TabStop = false;
-             pictureBox.Click += new System.EventHandler(this.panel_Click);
+
              pictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
 
 
@@ -161,20 +172,53 @@ namespace Steam_easy_switch
         {
             System.Drawing.Graphics graphics = e.Graphics;
             System.Drawing.Rectangle gradient_rectangle = new System.Drawing.Rectangle(0, 0, this.Width, this.Height);
-            System.Drawing.Brush b = new System.Drawing.Drawing2D.LinearGradientBrush(gradient_rectangle, Color.FromArgb(255, 33, 41, 52), Color.FromArgb(255, 42, 46, 51), 65f);
+            System.Drawing.Brush b = new System.Drawing.Drawing2D.LinearGradientBrush(gradient_rectangle, Color.FromArgb(255, 33, 41, 52), Color.FromArgb(255, 42, 46, 51), 90f);
             graphics.FillRectangle(b, gradient_rectangle);
         }
 
         private void panel_Click(object sender, EventArgs e)
         {
-            Registry.CurrentUser.OpenSubKey("SOFTWARE\\Valve\\Steam").SetValue("AutoLoginUser",((PanelP)sender).AccountName);
-            String strSteamInstallPath = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Valve\\Steam").GetValue("InstallPath").ToString();
-            Process.Start(strSteamInstallPath + "\\steam.exe");
-            Console.WriteLine("Pronto");
+            if(sender is PanelP)
+            {
+                foreach (Process proc in Process.GetProcessesByName("Steam"))
+                {
+                    proc.Kill();
+                }
+                System.Threading.Thread.Sleep(100);
+                Registry.CurrentUser.OpenSubKey("SOFTWARE\\Valve\\Steam",true).SetValue("AutoLoginUser",((PanelP)sender).AccountName);
+                String strSteamInstallPath = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Valve\\Steam").GetValue("InstallPath").ToString();
+                Process.Start(strSteamInstallPath + "\\steam.exe");
+                Console.WriteLine("Pronto");
+            }
+            else
+            {
+                panel_Click(((Control)sender).Parent, e);
+            }
+
         }
 
-       
+        private void pbClose_Click(object sender, EventArgs e)
+        {
+            if (System.Windows.Forms.Application.MessageLoop)
+            {
+                // WinForms app
+                System.Windows.Forms.Application.Exit();
+            }
+            else
+            {
+                // Console app
+                System.Environment.Exit(1);
+            }
+        }
 
+        private void panelOptions_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
 
     }
 }
