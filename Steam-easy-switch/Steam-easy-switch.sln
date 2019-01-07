@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Steam-easy-switch", "Steam-easy-switch\Steam-easy-switch.csproj", "{5837725F-39E1-4BF1-937C-1FE9A0883B89}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Registry changer", "Registry changer\Registry changer.csproj", "{73053AF6-8904-4A4C-8050-F43B751CE7F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5837725F-39E1-4BF1-937C-1FE9A0883B89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5837725F-39E1-4BF1-937C-1FE9A0883B89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5837725F-39E1-4BF1-937C-1FE9A0883B89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73053AF6-8904-4A4C-8050-F43B751CE7F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73053AF6-8904-4A4C-8050-F43B751CE7F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73053AF6-8904-4A4C-8050-F43B751CE7F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73053AF6-8904-4A4C-8050-F43B751CE7F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -182,13 +182,22 @@ namespace Steam_easy_switch
             {
                 foreach (Process proc in Process.GetProcessesByName("Steam"))
                 {
-                    proc.Kill();
+                     proc.Kill();
                 }
                 System.Threading.Thread.Sleep(100);
-                Registry.CurrentUser.OpenSubKey("SOFTWARE\\Valve\\Steam",true).SetValue("AutoLoginUser",((PanelP)sender).AccountName);
+
+                System.Diagnostics.Process pp = new System.Diagnostics.Process();
+                pp.StartInfo.FileName = "Registry_changer.exe";
+                pp.StartInfo.Arguments = ((PanelP)sender).AccountName;
+                pp.Start();
+
+                //Registry.CurrentUser.OpenSubKey("SOFTWARE\\Valve\\Steam",true).SetValue("AutoLoginUser",((PanelP)sender).AccountName);
                 String strSteamInstallPath = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Valve\\Steam").GetValue("InstallPath").ToString();
+                
                 Process.Start(strSteamInstallPath + "\\steam.exe");
-                Console.WriteLine("Pronto");
+                //MessageBox.Show("Open your steam now!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                pbClose_Click(null, null);
             }
             else
             {
