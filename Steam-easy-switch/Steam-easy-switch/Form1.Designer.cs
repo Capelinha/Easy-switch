@@ -33,6 +33,7 @@
             this.labelPersonaName = new System.Windows.Forms.Label();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.labelAccountName = new System.Windows.Forms.Label();
+            this.flPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panelP1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
@@ -43,8 +44,7 @@
             this.panelP1.Controls.Add(this.labelPersonaName);
             this.panelP1.Controls.Add(this.pictureBox);
             this.panelP1.Controls.Add(this.labelAccountName);
-            this.panelP1.id64 = ((long)(0));
-            this.panelP1.Location = new System.Drawing.Point(43, 32);
+            this.panelP1.Location = new System.Drawing.Point(61, 410);
             this.panelP1.Name = "panelP1";
             this.panelP1.Size = new System.Drawing.Size(120, 150);
             this.panelP1.TabIndex = 1;
@@ -88,12 +88,21 @@
             this.labelAccountName.TabIndex = 1;
             this.labelAccountName.Text = "mateusoigreja";
             // 
+            // flPanel
+            // 
+            this.flPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flPanel.Location = new System.Drawing.Point(12, 12);
+            this.flPanel.Name = "flPanel";
+            this.flPanel.Size = new System.Drawing.Size(710, 348);
+            this.flPanel.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(34)))), ((int)(((byte)(39)))));
-            this.ClientSize = new System.Drawing.Size(529, 270);
+            this.ClientSize = new System.Drawing.Size(734, 589);
+            this.Controls.Add(this.flPanel);
             this.Controls.Add(this.panelP1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(203)))), ((int)(((byte)(216)))));
             this.Name = "Form1";
@@ -111,6 +120,7 @@
         private System.Windows.Forms.Label labelAccountName;
         private System.Windows.Forms.PictureBox pictureBox;
         private PanelP panelP1;
+        private System.Windows.Forms.FlowLayoutPanel flPanel;
     }
 }
 

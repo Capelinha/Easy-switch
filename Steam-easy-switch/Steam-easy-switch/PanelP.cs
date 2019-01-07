@@ -9,8 +9,6 @@ namespace Steam_easy_switch
 {
     class PanelP : Panel
     {
-        public long id64 { get; set; }
-
         public class HoverEventArgs
         {
             public bool Active { get; set; }
