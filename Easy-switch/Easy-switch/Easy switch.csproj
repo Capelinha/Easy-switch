@@ -7,8 +7,8 @@
     <ProjectGuid>{5837725F-39E1-4BF1-937C-1FE9A0883B89}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Steam_easy_switch</RootNamespace>
-    <AssemblyName>Steam-easy-switch</AssemblyName>
+    <RootNamespace>Easy_switch</RootNamespace>
+    <AssemblyName>Easy-switch</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <PublishUrl>publish\</PublishUrl>
@@ -50,7 +50,7 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Steam_Logo.ico</ApplicationIcon>
+    <ApplicationIcon>ico.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Gameloop.Vdf, Version=0.5.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -115,7 +115,8 @@
     <None Include="Resources\close.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Steam_Logo.png" />
+    <None Include="Resources\icons8-change-100.png" />
+    <Content Include="ico.ico" />
     <Content Include="Steam_Logo.ico" />
   </ItemGroup>
   <ItemGroup>

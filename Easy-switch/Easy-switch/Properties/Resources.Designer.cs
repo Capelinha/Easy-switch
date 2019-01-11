@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Steam_easy_switch.Properties {
+namespace Easy_switch.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Steam_easy_switch.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Steam_easy_switch.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Easy_switch.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -73,9 +73,9 @@ namespace Steam_easy_switch.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap questionPicture {
+        internal static System.Drawing.Bitmap icons8_change_100 {
             get {
-                object obj = ResourceManager.GetObject("questionPicture", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8_change_100", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace Steam_easy_switch.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Steam_Logo {
+        internal static System.Drawing.Bitmap questionPicture {
             get {
-                object obj = ResourceManager.GetObject("Steam_Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("questionPicture", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

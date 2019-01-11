@@ -65,7 +65,7 @@ namespace Steam_easy_switch
                 }
                 catch (FileNotFoundException E)
                 {
-                    picture = Steam_easy_switch.Properties.Resources.questionPicture;
+                    picture = Easy_switch.Properties.Resources.questionPicture;
                 }
 
 
@@ -235,6 +235,11 @@ namespace Steam_easy_switch
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+
+        private void label_Click(object sender, EventArgs e)
+        {
+
         }
 
     }

@@ -50,7 +50,7 @@
             // pbClose
             // 
             this.pbClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbClose.Image = global::Steam_easy_switch.Properties.Resources.close;
+            this.pbClose.Image = global::Easy_switch.Properties.Resources.close;
             this.pbClose.Location = new System.Drawing.Point(659, 9);
             this.pbClose.Name = "pbClose";
             this.pbClose.Size = new System.Drawing.Size(10, 10);
@@ -65,9 +65,10 @@
             this.label.Font = new System.Drawing.Font("D-DIN Exp", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label.Location = new System.Drawing.Point(10, 9);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(126, 12);
+            this.label.Size = new System.Drawing.Size(92, 12);
             this.label.TabIndex = 4;
-            this.label.Text = "Steam account switcher";
+            this.label.Text = "Account switcher";
+            this.label.Click += new System.EventHandler(this.label_Click);
             this.label.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelOptions_MouseMove);
             // 
             // panelOptions
