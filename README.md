@@ -1,4 +1,4 @@
-# Steam easy switch
+# Easy switch
 This program determines which steam accounts you have already entered on your computer and allow you to switch from one to another without typing the password and steam guard code.
 
 The program was based on this reddit post: https://www.reddit.com/r/GlobalOffensive/comments/7kvuvc/this_script_will_let_you_easily_switch_between_2/
@@ -17,6 +17,6 @@ For the operation of the account switch function never end the session through t
 
 1° Download the "binaries.zip" file on the release page.
 
-2° Extract and open "Steam-easy-switch.exe".
+2° Extract and open "Easy-switch.exe".
 
 3° Enjoy it.
