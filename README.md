@@ -6,3 +6,5 @@ The program was based on this reddit post: https://www.reddit.com/r/GlobalOffens
 It reads the loginusers.vdf file and lists the accounts that have already been used to log in to steam. After that it retrieves the profile photos from the "avatarcache" folder and displays it on the screen. When you select the account, the program automatically closes the steam process, changes the registry and reopens the steam.
 
 For the operation of the account exchange function never end the session through the steam interface.
+
+![alt text](https://i.imgur.com/Rnu25Eh.png)
