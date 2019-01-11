@@ -16,5 +16,7 @@ For the operation of the account switch function never end the session through t
 ## Setup
 
 1° Download the "binaries.zip" file on the release page.
+
 2° Extract and open "Steam-easy-switch.exe".
+
 3° Enjoy it.
